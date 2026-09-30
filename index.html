@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shokorad | شکوراد</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="" alt="" class="">
+
+        <h1>به دنیای شیرین شکوراد خوش اومدید 🍫</h1>
+
+        <p>
+            نمونه کارهای دست‌ساز و خانگی ما را ببینید.
+        </p>
+<button id="theme-toggle">🌙</button>
+    </header>
+
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="جستجوی نمونه کار...">
+
+    </section>
+
+    <section class="products">
+
+        <!-- نمونه کار 1 -->
+        <div class="card">
+
+            <img src="https://via.placeholder.com/350x250" alt="نمونه">
+
+            <h2>نمونه کار اول</h2>
+
+            <p>
+                این قسمت توضیحات نمونه کار قرار میگیرد.
+            </p>
+
+        </div>
+
+        <!-- نمونه کار 2 -->
+        <div class="card">
+
+            <img src="https://via.placeholder.com/350x250" alt="نمونه">
+
+            <h2>نمونه کار دوم</h2>
+
+            <p>
+                این قسمت توضیحات نمونه کار قرار میگیرد.
+            </p>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+<script>
+const button = document.getElementById("theme-toggle");
+
+button.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        button.textContent = "☀️";
+    } else {
+        button.textContent = "🌙";
+    }
+});
+</script>
+<footer>
+    <h3>ارتباط با ما</h3>
+
+    <a href="https://rubika.ir/@ShokoradPage" target="_blank">📷 Rubika</a><br>
+
+    <a href=" target="_blank"> شماره موبایل 09196051527</a><br>
+
+    <a href="https://wa.me/09196051527" target="_blank">🟢 WhatsApp</a>
+</footer>
+</body>
+<div class="floating-chocolates">
+  <span>🍫</span>
+  <span>🍫</span>
+  <span>🍫</span>
+  <span>🍫</span>
+  <span>🍫</span>
+</div>
+</html>

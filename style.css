@@ -1,0 +1,335 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
+}
+
+body{
+    background:#f8f5ef;
+    color:#333;
+}
+
+header{
+    background:#2f6f4f;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.logo{
+    width:170px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    padding:30px 15px;
+}
+
+.search-box input{
+    width:90%;
+    max-width:500px;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2{
+    padding:15px;
+    color:#2f6f4f;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+/* انیمیشن ورود صفحه */
+body{
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* انیمیشن هاور دکمه ها */
+button,
+input[type="submit"]{
+    transition: all .3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    transform: scale(1.06);
+}
+
+/* انیمیشن کارت ها */
+.card{
+    transition: all .35s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+/* حرکت نرم روی لینک‌ها */
+a{
+    transition: all .3s ease;
+}
+
+a:hover{
+    transform: translateY(-3px);
+}
+
+/* سایه و حرکت نرم عکس‌ها */
+img{
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+img:hover{
+    transform: scale(1.04);
+}
+
+/* انیمیشن شناور برای عنوان اصلی */
+.hero h1,
+h1{
+    animation: floating 5s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-3px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.hero h1,
+h1{
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+button,
+.btn{
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover{
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255,105,180,0.4);
+}
+/* نسخه موبایل */
+@media (max-width: 768px){
+
+    body{
+        padding: 15px;
+    }
+
+    h1{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    p{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    button{
+        width: 100%;
+        font-size: 18px;
+        padding: 14px;
+    }
+}
+/* افکت نرم برای همه بخش‌ها */
+section,
+.card,
+div{
+    transition: all .35s ease;
+}
+
+section:hover,
+.card:hover{
+    transform: translateY(-6px);
+}
+/* پس‌زمینه متحرک */
+body{
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+/* کارت‌های حرفه‌ای */
+.card{
+    transition: transform .4s ease, box-shadow .4s ease;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.card:hover{
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+}
+/* شکلات‌های شناور */
+.floating-chocolates{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-chocolates span{
+    position: absolute;
+    font-size: 28px;
+    animation: floatChocolate 12s linear infinite;
+    opacity: .25;
+}
+
+.floating-chocolates span:nth-child(1){left:8%;animation-delay:0s;}
+.floating-chocolates span:nth-child(2){left:28%;animation-delay:2s;}
+.floating-chocolates span:nth-child(3){left:50%;animation-delay:4s;}
+.floating-chocolates span:nth-child(4){left:72%;animation-delay:6s;}
+.floating-chocolates span:nth-child(5){left:90%;animation-delay:8s;}
+
+@keyframes floatChocolate{
+    from{
+        transform: translateY(-120px) rotate(0deg);
+    }
+    to{
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+/* کارت‌های شیشه‌ای */
+.card{
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+/* هدر ثابت */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(20, 70, 55, 0.88);
+    transition: all .35s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+/* افکت حرفه‌ای کادر جستجو */
+input[type="search"],
+input[type="text"]{
+    transition: all .35s ease;
+}
+
+input[type="search"]:focus,
+input[type="text"]:focus{
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255,105,180,.35);
+    outline: none;
+}
+/* اسکرول‌بار اختصاصی شوکوراد */
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f8efe7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#7acb9f,#ff8eb5);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(#63b98e,#ff6fa3);
+}
